@@ -1,0 +1,123 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Library Management</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-icon">📚</div>
+
+          <div>
+            <strong id="brandName"> My Library </strong>
+
+            <span> Management System </span>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <button class="menu-item active" data-page="dashboard">
+            🏠
+            <span>Dashboard</span>
+          </button>
+
+          <button class="menu-item" data-page="seats">
+            💺
+            <span>Seats</span>
+          </button>
+
+          <button class="menu-item" data-page="students">
+            👨‍🎓
+            <span>Students</span>
+          </button>
+
+          <button class="menu-item" data-page="fees">
+            💰
+            <span>Fees</span>
+          </button>
+
+          <button class="menu-item" data-page="records">
+            📋
+            <span>Records</span>
+          </button>
+
+          <button class="menu-item" data-page="settings">
+            ⚙️
+            <span>Settings</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="admin-mini">
+            <div class="avatar">A</div>
+
+            <div>
+              <strong id="sideAdmin"> Admin </strong>
+
+              <span> Administrator </span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+
+      <main class="main">
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">LIBRARY MANAGEMENT</p>
+
+            <h1 id="pageTitle">Dashboard</h1>
+
+            <p id="pageSubtitle">Overview of your library</p>
+          </div>
+
+          <div class="top-actions">
+            <button class="quick-add" onclick="openStudentForm()">
+              + Add Student
+            </button>
+
+            <div class="admin-profile">
+              <div class="avatar" id="topAvatar">A</div>
+
+              <div>
+                <strong id="topAdmin"> Admin </strong>
+
+                <span> Administrator </span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- PAGE -->
+
+        <section id="pageContent"></section>
+      </main>
+    </div>
+
+    <!-- MODAL -->
+
+    <div id="modalOverlay" class="modal-overlay hidden">
+      <div id="modal" class="modal"></div>
+    </div>
+
+    <!-- TOAST -->
+
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
